@@ -18,7 +18,7 @@ class DatabaseImportStrategy implements ImportStrategy
 
     public function import(): void
     {
-        $process = "mysql --host=$this->host --port=$this->port --user=$this->username --password=$this->password --execute='source $this->path'";
+        $process = "mysql --host=$this->host --port=$this->port --user=$this->username --password=$this->password --loose-ssl-verify-server-cert=0 --execute='source $this->path'";
 
         exec($process, $output, $code);
         $isFailure = $code === Command::FAILURE;
