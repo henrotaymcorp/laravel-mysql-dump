@@ -1,5 +1,11 @@
 # @henrotaym/laravel-mysql-dump
 
+## 1.0.2
+
+### Patch Changes
+
+- d6d5438: Import no longer fails with "self-signed certificate in certificate chain" when the MariaDB client (11.4+) connects to a MySQL server using a self-signed certificate.
+
 ## 1.0.1
 
 ### Patch Changes
